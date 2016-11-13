@@ -1,16 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 object Foo {
 
-  /**
-   * @param args the command line arguments
-   */
   def main(args: Array[String]): Unit = {
-    println("Hello, world!")
+    var hello = new Hello("Julio");
+    println(hello.echo);
+    println(hello.count);
+    println(hello.buildName("Julio", "Souza"));
+    println(hello.buildName("Julio", "Souza", "Nunes"));
+
+    var t1 = Time(10, 20);
+    var t2 = Time();
+    var t3 = Time(9);
+
+    println(t1.toString);
+    println(t2.toString);
+    println(t3.toString);
+
   }
 
 }

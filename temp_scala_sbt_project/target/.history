@@ -3,3 +3,39 @@ project SampleProject
 run
 class Julio
 exit
+project SampleProject
+run
+2
+project SampleProject
+run
+exit
+project SampleProject
+run
+exit
+project SampleProject
+run
+exit
+project SampleProject
+run
+exit
+project SampleProject
+run
+project SampleProject
+run
+exit
+project SampleProject
+clean
+exit
+project SampleProject
+run
+exit
+project SampleProject
+run
+exit
+project SampleProject
+run
+exit
+project SampleProject
+run
+ext
+exit

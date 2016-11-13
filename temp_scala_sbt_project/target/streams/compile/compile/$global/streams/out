@@ -1,23 +1,22 @@
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
-[0m[[0mdebug[0m] [0m	added: Set(C:\Users\julio\Documents\GitHub\scala_datascience\temp_scala_sbt_project\src\main\scala\Foo.scala)[0m
-[0m[[0mdebug[0m] [0m	modified: Set()[0m
+[0m[[0mdebug[0m] [0m	added: Set()[0m
+[0m[[0mdebug[0m] [0m	modified: Set(C:\Users\julio\Documents\GitHub\scala_datascience\temp_scala_sbt_project\src\main\scala\Time.scala)[0m
 [0m[[0mdebug[0m] [0mRemoved products: Set()[0m
 [0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
 [0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
-[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(C:\Users\julio\Documents\GitHub\scala_datascience\temp_scala_sbt_project\src\main\scala\Foo.scala)[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(C:\Users\julio\Documents\GitHub\scala_datascience\temp_scala_sbt_project\src\main\scala\Time.scala)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m	product: Set()[0m
 [0m[[0mdebug[0m] [0m	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(C:\Users\julio\Documents\GitHub\scala_datascience\temp_scala_sbt_project\src\main\scala\Foo.scala)[0m
-[0m[[0mdebug[0m] [0mRecompiling all 1 sources: invalidated sources (1) exceeded 50.0% of all sources[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(C:\Users\julio\Documents\GitHub\scala_datascience\temp_scala_sbt_project\src\main\scala\Time.scala)[0m
 [0m[[0minfo[0m] [0mCompiling 1 Scala source to C:\Users\julio\Documents\GitHub\scala_datascience\temp_scala_sbt_project\target\scala-2.11\classes...[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.4[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.4[0m
-[0m[[0mdebug[0m] [0mRunning cached compiler 4789e6f6, interfacing (CompilerInterface) with Scala compiler version 2.11.4[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 2c63a046, interfacing (CompilerInterface) with Scala compiler version 2.11.4[0m
 [0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
 [0m[[0mdebug[0m] [0m	-unchecked[0m
 [0m[[0mdebug[0m] [0m	-deprecation[0m
@@ -25,11 +24,29 @@
 [0m[[0mdebug[0m] [0m	C:\Program Files\Java\jdk1.8.0_66\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_66\jre\classes;C:\Users\julio\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.4.jar[0m
 [0m[[0mdebug[0m] [0m	-classpath[0m
 [0m[[0mdebug[0m] [0m	C:\Users\julio\Documents\GitHub\scala_datascience\temp_scala_sbt_project\target\scala-2.11\classes[0m
-[0m[[0mdebug[0m] [0mScala compilation took 3.259556352 s[0m
+[0m[[0mdebug[0m] [0mScala compilation took 3.341821289 s[0m
 [0m[[0mdebug[0m] [0mInvalidating by inheritance (transitively)...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(C:\Users\julio\Documents\GitHub\scala_datascience\temp_scala_sbt_project\src\main\scala\Time.scala)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive public inheritance: Set(C:\Users\julio\Documents\GitHub\scala_datascience\temp_scala_sbt_project\src\main\scala\Time.scala)[0m
+[0m[[0mdebug[0m] [0mInvalidated by direct dependency: Set(C:\Users\julio\Documents\GitHub\scala_datascience\temp_scala_sbt_project\src\main\scala\Foo.scala)[0m
+[0m[[0mdebug[0m] [0mNew invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set(C:\Users\julio\Documents\GitHub\scala_datascience\temp_scala_sbt_project\src\main\scala\Foo.scala)[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set(C:\Users\julio\Documents\GitHub\scala_datascience\temp_scala_sbt_project\src\main\scala\Foo.scala)[0m
-[0m[[0mdebug[0m] [0mInvalidated by transitive public inheritance: Set(C:\Users\julio\Documents\GitHub\scala_datascience\temp_scala_sbt_project\src\main\scala\Foo.scala)[0m
-[0m[[0mdebug[0m] [0mInvalidated by direct dependency: Set()[0m
+[0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set(C:\Users\julio\Documents\GitHub\scala_datascience\temp_scala_sbt_project\src\main\scala\Foo.scala)[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to C:\Users\julio\Documents\GitHub\scala_datascience\temp_scala_sbt_project\target\scala-2.11\classes...[0m
+[0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.4[0m
+[0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.4[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 35bbeb8c, interfacing (CompilerInterface) with Scala compiler version 2.11.4[0m
+[0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
+[0m[[0mdebug[0m] [0m	-unchecked[0m
+[0m[[0mdebug[0m] [0m	-deprecation[0m
+[0m[[0mdebug[0m] [0m	-bootclasspath[0m
+[0m[[0mdebug[0m] [0m	C:\Program Files\Java\jdk1.8.0_66\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_66\jre\classes;C:\Users\julio\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.4.jar[0m
+[0m[[0mdebug[0m] [0m	-classpath[0m
+[0m[[0mdebug[0m] [0m	C:\Users\julio\Documents\GitHub\scala_datascience\temp_scala_sbt_project\target\scala-2.11\classes[0m
+[0m[[0mdebug[0m] [0mScala compilation took 0.560030158 s[0m
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m
