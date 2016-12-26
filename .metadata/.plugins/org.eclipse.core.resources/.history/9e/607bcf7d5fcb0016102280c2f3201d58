@@ -1,0 +1,21 @@
+package week2
+
+object Exercise {
+  //Write a product function that calculates the product of the values of a function for the points on a given interval.
+  def product (f: Int => Int)(x: Int, y:Int): Int =
+		if (x > y) 1
+		else f(x) * product(f)(x + 1, y)
+		
+	product(v => v + v)(1, 5)
+	
+	//Write a factorial in terms of product
+	def factorial (v: Int) = product(x => x)(1, v)
+	
+	factorial(5)
+	
+	//Product an Sum -> MapReduce
+	
+	def mapReduce (f: Int => Int, combine: (Int, Int) => Int, zero: Int)(x:Int, y:Int):Int =
+	if (x > y) zero
+	else combine(f(x), mapReduce(f, combine, zero)(x+1,y))
+}

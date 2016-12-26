@@ -1,0 +1,10 @@
+package week2
+
+object Currying {
+  def sum (f: Int => Int): (Int, Int) => Int = {
+  	def sumF(x: Int, y: Int): Int =
+  		if (x > y) 0
+  		else f(x) + sumF(x + 1, y)
+  	sumF
+  }                                               //> sum: (f: Int => Int)(Int, Int) => Int
+}

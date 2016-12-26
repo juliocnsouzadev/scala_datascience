@@ -1,0 +1,16 @@
+package week2
+
+object Currying {
+  def sum (f: Int => Int): (Int, Int) => Int = {
+  	def sumF(x: Int, y: Int): Int =
+  		if (x > y) 0
+  		else f(x) + sumF(x + 1, y)
+  	sumF
+  }                                               //> sum: (f: Int => Int)(Int, Int) => Int
+  
+  def fact(v: Int): Int = if (v == 0) 1 else fact(v - 1)
+  
+  def sumOfIntegers = sum(v => v)
+	def sumOfCubes  = sum(v => v * v * v)
+	def sumOfFactorials = sum(fact)
+}

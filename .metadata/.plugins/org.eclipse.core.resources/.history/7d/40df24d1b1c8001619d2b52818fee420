@@ -1,0 +1,9 @@
+package week2
+
+object session {
+
+	def sum(f: Int => Int, a: Int, b: Int) = {
+	
+	}                                         //> sum: (f: Int => Int, a: Int, b: Int)Unit
+
+}
