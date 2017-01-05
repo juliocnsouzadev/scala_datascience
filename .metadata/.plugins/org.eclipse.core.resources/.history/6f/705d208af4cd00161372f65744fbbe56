@@ -1,0 +1,5 @@
+package week3
+
+object IntSetsTesting {
+  println("Welcome to the Scala worksheet")
+}

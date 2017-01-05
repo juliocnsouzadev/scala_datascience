@@ -1,5 +1,0 @@
-package week2
-
-object Exercise {
-  //Write a product function that calculates the product of the values of a function for the points on a given interval.
-}

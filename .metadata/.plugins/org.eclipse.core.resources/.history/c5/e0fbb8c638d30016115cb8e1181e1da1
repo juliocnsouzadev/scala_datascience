@@ -1,0 +1,14 @@
+package week4.primitives
+
+object Zero extends Nat {
+  def isZero: Boolean = True
+  
+  def predecessor: Nat = throw new Error("no predecessor for 0")
+  
+  def successor: Nat = new Succ(this)
+  
+  def + (that: Nat): Nat = 
+  
+  def - (that: Nat): Nat
+  
+}

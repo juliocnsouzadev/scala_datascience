@@ -1,0 +1,8 @@
+package week3
+
+import week3.intsets._
+
+object IntSetsTesting {
+  val set1 = new NonEmpty(3,  Empty,  Empty)
+  val set2 = set1 add 5
+}

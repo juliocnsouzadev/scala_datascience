@@ -1,0 +1,7 @@
+package week3.lists
+
+class Nil[T] extends List[T] {
+  def isEmpty : Boolean = true
+  def head : T = throw NoSuchElementException("Nill.head")
+  def tail : List[T] = throw NoSuchElementException("Nill.tail")
+}

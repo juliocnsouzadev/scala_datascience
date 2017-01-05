@@ -1,0 +1,9 @@
+package week3
+
+import week3.lists._
+
+object ListsTesting {
+  val list = new Cons(1, new Cons(2, new Cons(3, new Nil)))
+                                                  //> list  : week3.lists.Cons[Int] = week3.lists.Cons@28ba21f3
+  list.nth(-1)                                    //> res0: Int = 3
+}

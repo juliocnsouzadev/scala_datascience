@@ -1,0 +1,12 @@
+package week4.primitives
+
+class Succ(n: Nat) extends Nat {
+  
+  def isZero: Boolean = false
+  
+  def predecessor: Nat = n
+  
+  def + (that: Nat): Nat = this + that
+  
+  def - (that: Nat): Nat = this - that
+}

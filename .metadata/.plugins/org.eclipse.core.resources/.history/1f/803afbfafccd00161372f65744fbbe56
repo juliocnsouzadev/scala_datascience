@@ -1,0 +1,12 @@
+package week3.lists
+
+class Cons[T](val head: T, val tail: List[T]) extends List[T] {
+  
+  def isEmpty : Boolean = false
+  
+  def nth(n: Int): T = 
+    nthInner(n, this.tail) 
+    
+  
+  
+}

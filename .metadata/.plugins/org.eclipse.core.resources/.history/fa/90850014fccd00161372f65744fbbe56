@@ -1,0 +1,17 @@
+package week3.lists
+
+class Cons[T](val head: T, val tail: List[T]) extends List[T] {
+  
+  private val h : T = head
+  private val t : List[T] = tail
+  
+  def isEmpty : Boolean = false
+  
+  def nth[T](n: Int): T = 
+    nth(n- 1, t) 
+    
+  private def  nth[T](n: Int, xs: List[T]): T =  
+    if (n == 0) h
+    else nth(n- 1, t) 
+  
+}

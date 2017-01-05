@@ -1,0 +1,5 @@
+package week4.primitives
+
+object Zero extends Nat {
+  
+}

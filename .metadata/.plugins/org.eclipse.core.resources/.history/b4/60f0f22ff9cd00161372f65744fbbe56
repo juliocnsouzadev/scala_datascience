@@ -1,0 +1,5 @@
+package week3.lists
+
+class Nil[T] extends List[T] {
+  
+}

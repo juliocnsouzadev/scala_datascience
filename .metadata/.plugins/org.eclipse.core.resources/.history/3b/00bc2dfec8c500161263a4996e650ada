@@ -1,5 +1,0 @@
-package week01
-
-object session {
-  1+5                                             //> res0: Int(6) = 6
-}

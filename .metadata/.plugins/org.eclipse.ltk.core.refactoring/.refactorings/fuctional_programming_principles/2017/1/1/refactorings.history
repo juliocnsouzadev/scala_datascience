@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;fuctional_programming_principles/src/week4/primitives/Boolean.scala&apos; to &apos;MyBoolean.scala&apos;" description="Rename resource &apos;Boolean.scala&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/week4/primitives/Boolean.scala" name="MyBoolean.scala" stamp="1483615377655" updateReferences="true"/>
+</session>

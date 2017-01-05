@@ -1,0 +1,5 @@
+package week4.primitives
+
+object False extends Boolean{
+  def ifThenElse[T] (t: => T, f: => T) = f;
+}

@@ -1,5 +1,0 @@
-package week2
-
-object Currying {
-  println("Welcome to the Scala worksheet")
-}
