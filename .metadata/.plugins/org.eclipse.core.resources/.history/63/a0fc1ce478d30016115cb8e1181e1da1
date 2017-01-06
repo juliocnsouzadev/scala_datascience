@@ -1,0 +1,7 @@
+package week4.pattern_matching
+
+trait Expression {
+  def eval: Int = this  match {
+    case caseValue => 
+  }
+}

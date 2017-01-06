@@ -1,0 +1,6 @@
+package week4.primitives
+
+object Testing {
+  List(1,2)
+  List()
+}

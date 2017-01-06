@@ -1,7 +1,0 @@
-package week3.lists
-
-trait List[T] {
-  def isEmpty : Boolean
-  def head : T
-  def tail : List[T]
-}

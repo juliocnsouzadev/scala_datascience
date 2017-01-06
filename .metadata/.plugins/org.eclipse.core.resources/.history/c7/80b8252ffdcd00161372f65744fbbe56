@@ -1,7 +1,0 @@
-package week3
-
-import week3.lists._
-
-object ListsTesting {
-  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
-}

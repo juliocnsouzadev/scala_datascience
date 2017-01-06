@@ -1,0 +1,5 @@
+package week4.primitives
+
+object Testing {
+  List(1,2)                                       //> res0: week3.lists.List[Int] = week3.lists.Cons@28ba21f3
+}
