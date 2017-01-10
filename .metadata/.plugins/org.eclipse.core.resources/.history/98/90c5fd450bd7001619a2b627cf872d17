@@ -1,0 +1,14 @@
+package week5
+
+object Testing {
+  
+  def init[T](xs: List[T]): List[T] = xs match {
+    case List()  => throw new Error("init of empty list")
+    case List(x) => List()
+    case y :: ys => y :: init(ys)
+  }                                               //> init: [T](xs: List[T])List[T]
+  
+  def removeAt[T](n: Int, xs: List[T]) = (xs take n) ::: (xs drop n+1)
+  
+  removeAt(1, List('a', 'b', 'c', 'd'))
+}

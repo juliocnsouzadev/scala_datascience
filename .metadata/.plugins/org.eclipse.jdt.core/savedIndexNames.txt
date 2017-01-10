@@ -12,9 +12,9 @@ INDEX VERSION 1.127+C:\Users\julio\Documents\GitHub\scala_datascience\.metadata\
 188619105.index
 1915258847.index
 1583927216.index
-2017505986.index
-1154103214.index
 2831536327.index
+1154103214.index
+2017505986.index
 3807822883.index
 3878457715.index
 3100681789.index
@@ -29,3 +29,4 @@ INDEX VERSION 1.127+C:\Users\julio\Documents\GitHub\scala_datascience\.metadata\
 1334509261.index
 3172068124.index
 2312443017.index
+2908153268.index

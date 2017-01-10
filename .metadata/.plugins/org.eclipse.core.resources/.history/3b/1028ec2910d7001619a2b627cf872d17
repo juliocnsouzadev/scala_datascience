@@ -1,0 +1,52 @@
+package week5
+
+object Testing {
+
+  def init[T](xs: List[T]): List[T] = xs match {
+    case List()  => throw new Error("init of empty list")
+    case List(x) => List()
+    case y :: ys => y :: init(ys)
+  }                                               //> init: [T](xs: List[T])List[T]
+
+  def removeAt[T](n: Int, xs: List[T]) = (xs take n) ::: (xs drop n + 1)
+                                                  //> removeAt: [T](n: Int, xs: List[T])List[T]
+
+  removeAt(1, List('a', 'b', 'c', 'd'))           //> res0: List[Char] = List(a, c, d)
+
+  def merge(xs: List[Int], ys: List[Int]): List[Int] =
+    (xs, ys) match {
+      case (Nil, List()) => ys
+      case (List(), Nil) => xs
+      case (x :: xs1, y :: ys1) =>
+        if (x < y) x :: merge(xs1, ys)
+        else y :: merge(xs, ys1)
+
+    }                                             //> merge: (xs: List[Int], ys: List[Int])List[Int]
+
+  def msort(xs: List[Int]): List[Int] = {
+    val n = xs.length / 2
+    if (n == 0) xs
+    else {
+      val (fst, snd) = xs splitAt n
+      merge(msort(fst), msort(snd))
+    }
+  }                                               //> msort: (xs: List[Int])List[Int]
+
+  val numbers = List(0, 10 - 5 - 8, 11, 4, 3, -1, 1, -2)
+                                                  //> numbers  : List[Int] = List(0, -3, 11, 4, 3, -1, 1, -2)
+  msort(numbers)                                  //> scala.MatchError: (List(0),List()) (of class scala.Tuple2)
+                                                  //| 	at week5.Testing$$anonfun$main$1.merge$1(week5.Testing.scala:16)
+                                                  //| 	at week5.Testing$$anonfun$main$1.merge$1(week5.Testing.scala:22)
+                                                  //| 	at week5.Testing$$anonfun$main$1.msort$1(week5.Testing.scala:31)
+                                                  //| 	at week5.Testing$$anonfun$main$1.msort$1(week5.Testing.scala:31)
+                                                  //| 	at week5.Testing$$anonfun$main$1.msort$1(week5.Testing.scala:31)
+                                                  //| 	at week5.Testing$$anonfun$main$1.apply$mcV$sp(week5.Testing.scala:36)
+                                                  //| 	at org.scalaide.worksheet.runtime.library.WorksheetSupport$$anonfun$$exe
+                                                  //| cute$1.apply$mcV$sp(WorksheetSupport.scala:76)
+                                                  //| 	at org.scalaide.worksheet.runtime.library.WorksheetSupport$.redirected(W
+                                                  //| orksheetSupport.scala:65)
+                                                  //| 	at org.scalaide.worksheet.runtime.library.WorksheetSupport$.$execute(Wor
+                                                  //| ksheetSupport.scala:75)
+                                                  //| 	at week5.Testing$.main(week5.Testing.scala:3)
+                                                  //| 	at week5.Testing.main(week5.Testing.scala)
+}
