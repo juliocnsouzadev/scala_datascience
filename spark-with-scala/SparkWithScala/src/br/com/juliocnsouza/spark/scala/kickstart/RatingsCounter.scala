@@ -1,4 +1,4 @@
-package br.com.juliocnsouza.spark.scala
+package br.com.juliocnsouza.spark.scala.kickstart
 
 import org.apache.spark._
 import org.apache.spark.SparkContext._
