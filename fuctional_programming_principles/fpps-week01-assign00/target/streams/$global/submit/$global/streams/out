@@ -1,0 +1,10 @@
+[0m[[0minfo[0m] [0mAttempting to submit "example" assignment in "progfun1" course[0m
+[0m[[0minfo[0m] [0mUsing:[0m
+[0m[[0minfo[0m] [0m- email: e-mail@university.org[0m
+[0m[[0minfo[0m] [0m- submit token: suBmISsioNPasSwoRd[0m
+[0m[[0minfo[0m] [0mConnecting to Coursera...[0m
+[0m[[31merror[0m] [0mSubmission failed.[0m
+[0m[[31merror[0m] [0mThere was something wrong while attempting to submit.[0m
+[0m[[31merror[0m] [0mCoursera says:[0m
+[0m[[31merror[0m] [0mCould not parse Coursera's response:[0m
+[0m[[31merror[0m] [0mMap(errorCode -> invalidEmailOrToken, message -> Invalid email or token., details -> Map(learnerMessage -> You used an invalid email or your token may have expired. Please make sure you have entered all fields correctly. Try generating a new token if the issue still persists.)) (Status 401)[0m
