@@ -1,0 +1,17 @@
+package week5
+
+object ListMethods {
+
+	val numbers = List(12,-10,1,9,8,5,0,-7,87,-99)
+	
+	numbers filter (n => n > 0)
+	numbers filterNot  ( n => n > 0)
+	numbers partition ( n => n > 0)
+	numbers takeWhile v
+
+  val names = List("Julio","Rafael","Wellington","Carlos","Marcelo")
+  
+  
+  
+  
+}

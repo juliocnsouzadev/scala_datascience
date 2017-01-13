@@ -1,0 +1,17 @@
+package week5
+
+object ListMethods {
+
+	val numbers = List(12,-10,1,9,8,5,0,-7,87,-99)
+                                                  //> numbers  : List[Int] = List(12, -10, 1, 9, 8, 5, 0, -7, 87, -99)
+	
+	numbers filter (n => n > 0)               //> res0: List[Int] = List(12, 1, 9, 8, 5, 87)
+	numbers filter ( n => n < 0)
+
+  val names = List("Julio","Rafael","Wellington","Carlos","Marcelo")
+                                                  //> names  : List[String] = List(Julio, Rafael, Wellington, Carlos, Marcelo)
+  
+  
+  
+  
+}

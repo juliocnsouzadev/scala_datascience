@@ -38,11 +38,24 @@ object Testing {
                                                   //> numbers  : List[Int] = List(0, -3, 11, 4, 3, -1, 1, -2)
   //msort(numbers)((x: Int, y: Int) => x < y)
   msort(numbers)(Ordering.Int)                    //> res1: List[Int] = List(-3, -2, -1, 0, 1, 3, 4, 11)
-	msort(numbers)                            //> res2: List[Int] = List(-3, -2, -1, 0, 1, 3, 4, 11)
+  msort(numbers)                                  //> res2: List[Int] = List(-3, -2, -1, 0, 1, 3, 4, 11)
 
   val eletronics = List("laptop", "smartphone", "desktop")
                                                   //> eletronics  : List[String] = List(laptop, smartphone, desktop)
   //msort(eletronics)((x:String, y:String) => x.compareTo(y) < 0)
   msort(eletronics)(Ordering.String)              //> res3: List[String] = List(desktop, laptop, smartphone)
   msort(eletronics)                               //> res4: List[String] = List(desktop, laptop, smartphone)
+
+  def squareList(xs: List[Int]): List[Int] =
+    xs match {
+      case Nil     => Nil
+      case y :: ys => y * y :: squareList(ys)
+    }                                             //> squareList: (xs: List[Int])List[Int]
+
+  def squareListMap(xs: List[Int]): List[Int] =
+    xs map (x => x*x)                             //> squareListMap: (xs: List[Int])List[Int]
+    
+    squareList(numbers)                           //> res5: List[Int] = List(0, 9, 121, 16, 9, 1, 1, 4)
+    
+    squareListMap(numbers)                        //> res6: List[Int] = List(0, 9, 121, 16, 9, 1, 1, 4)
 }

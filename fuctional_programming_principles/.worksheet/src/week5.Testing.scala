@@ -35,11 +35,24 @@ object Testing {;import org.scalaide.worksheet.runtime.library.WorksheetSupport.
 
   val numbers = List(0, 10 - 5 - 8, 11, 4, 3, -1, 1, -2);System.out.println("""numbers  : List[Int] = """ + $show(numbers ));$skip(77); val res$1 = 
   //msort(numbers)((x: Int, y: Int) => x < y)
-  msort(numbers)(Ordering.Int);System.out.println("""res1: List[Int] = """ + $show(res$1));$skip(16); val res$2 = 
-	msort(numbers);System.out.println("""res2: List[Int] = """ + $show(res$2));$skip(61); 
+  msort(numbers)(Ordering.Int);System.out.println("""res1: List[Int] = """ + $show(res$1));$skip(17); val res$2 = 
+  msort(numbers);System.out.println("""res2: List[Int] = """ + $show(res$2));$skip(61); 
 
   val eletronics = List("laptop", "smartphone", "desktop");System.out.println("""eletronics  : List[String] = """ + $show(eletronics ));$skip(103); val res$3 = 
   //msort(eletronics)((x:String, y:String) => x.compareTo(y) < 0)
   msort(eletronics)(Ordering.String);System.out.println("""res3: List[String] = """ + $show(res$3));$skip(20); val res$4 = 
-  msort(eletronics);System.out.println("""res4: List[String] = """ + $show(res$4))}
+  msort(eletronics);System.out.println("""res4: List[String] = """ + $show(res$4));$skip(140); 
+
+  def squareList(xs: List[Int]): List[Int] =
+    xs match {
+      case Nil     => Nil
+      case y :: ys => y * y :: squareList(ys)
+    };System.out.println("""squareList: (xs: List[Int])List[Int]""");$skip(72); 
+
+  def squareListMap(xs: List[Int]): List[Int] =
+    xs map (x => x*x);System.out.println("""squareListMap: (xs: List[Int])List[Int]""");$skip(29); val res$5 = 
+    
+    squareList(numbers);System.out.println("""res5: List[Int] = """ + $show(res$5));$skip(32); val res$6 = 
+    
+    squareListMap(numbers);System.out.println("""res6: List[Int] = """ + $show(res$6))}
 }

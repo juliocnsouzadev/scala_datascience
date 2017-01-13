@@ -1,0 +1,39 @@
+package week5
+
+object ListMethods {
+
+  val numbers = List(12, -10, 1, 9, 8, 5, 0, -7, 87, -99)
+                                                  //> numbers  : List[Int] = List(12, -10, 1, 9, 8, 5, 0, -7, 87, -99)
+
+  numbers filter (n => n > 0)                     //> res0: List[Int] = List(12, 1, 9, 8, 5, 87)
+  numbers filterNot (n => n > 0)                  //> res1: List[Int] = List(-10, 0, -7, -99)
+  numbers partition (n => n > 0)                  //> res2: (List[Int], List[Int]) = (List(12, 1, 9, 8, 5, 87),List(-10, 0, -7, -9
+                                                  //| 9))
+  numbers takeWhile (n => n > 0)                  //> res3: List[Int] = List(12)
+  numbers dropWhile (n => n > 0)                  //> res4: List[Int] = List(-10, 1, 9, 8, 5, 0, -7, 87, -99)
+  numbers span (n => n > 0)                       //> res5: (List[Int], List[Int]) = (List(12),List(-10, 1, 9, 8, 5, 0, -7, 87, -9
+                                                  //| 9))
+
+  def pack[T](xs: List[T]): List[List[T]] = xs match {
+    case Nil      => Nil
+    case x :: xs1 => ???
+  }                                               //> pack: [T](xs: List[T])List[List[T]]
+  
+  pack(List("a", "a", "a", "b", "c", "c", "a"))   //> scala.NotImplementedError: an implementation is missing
+                                                  //| 	at scala.Predef$.$qmark$qmark$qmark(Predef.scala:230)
+                                                  //| 	at week5.ListMethods$$anonfun$main$1.pack$1(week5.ListMethods.scala:16)
+                                                  //| 
+                                                  //| 	at week5.ListMethods$$anonfun$main$1.apply$mcV$sp(week5.ListMethods.scal
+                                                  //| a:19)
+                                                  //| 	at org.scalaide.worksheet.runtime.library.WorksheetSupport$$anonfun$$exe
+                                                  //| cute$1.apply$mcV$sp(WorksheetSupport.scala:76)
+                                                  //| 	at org.scalaide.worksheet.runtime.library.WorksheetSupport$.redirected(W
+                                                  //| orksheetSupport.scala:65)
+                                                  //| 	at org.scalaide.worksheet.runtime.library.WorksheetSupport$.$execute(Wor
+                                                  //| ksheetSupport.scala:75)
+                                                  //| 	at week5.ListMethods$.main(week5.ListMethods.scala:3)
+                                                  //| 	at week5.ListMethods.main(week5.ListMethods.scala)
+
+  val names = List("Julio", "Rafael", "Wellington", "Carlos", "Marcelo")
+
+}
