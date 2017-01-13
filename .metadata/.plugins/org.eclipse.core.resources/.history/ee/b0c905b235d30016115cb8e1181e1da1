@@ -1,9 +1,0 @@
-package week4.primitives
-
-abstract class Boolean {
-  
-  def ifThenElse[T](t: => T, f: => T) : T
-  
-  def && (x: => Boolean): Boolean =
-     ifThenElse(x, False)
-}
