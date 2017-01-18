@@ -7,6 +7,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\julio\Documents\GitHub\scala_datascience\fuctional_programming_principles"/>
 			<item value="C:\Users\julio\Documents\GitHub\scala_datascience"/>
 			<item value="C:\Users\julio\Documents\GitHub\scala_datascience\fpps-week03-assign01"/>
 		</list>

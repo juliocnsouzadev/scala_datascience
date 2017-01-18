@@ -27,6 +27,18 @@ object ListMethods {;import org.scalaide.worksheet.runtime.library.WorksheetSupp
 
   encode(data);System.out.println("""res7: List[(String, Int)] = """ + $show(res$7));$skip(75); 
 
-  val names = List("Julio", "Rafael", "Wellington", "Carlos", "Marcelo");System.out.println("""names  : List[String] = """ + $show(names ))}
+  val names = List("Julio", "Rafael", "Wellington", "Carlos", "Marcelo");System.out.println("""names  : List[String] = """ + $show(names ));$skip(49); 
+  
+  val numbers2 = List(5,10,15,20,25,30,35,40);System.out.println("""numbers2  : List[Int] = """ + $show(numbers2 ));$skip(31); val res$8 = 
+  
+  numbers2 reduceLeft (_+_);System.out.println("""res8: Int = """ + $show(res$8));$skip(28); val res$9 = 
+  numbers2 reduceLeft (_-_);System.out.println("""res9: Int = """ + $show(res$9));$skip(32); val res$10 = 
+  
+  numbers2 reduceRight (_+_);System.out.println("""res10: Int = """ + $show(res$10));$skip(29); val res$11 = 
+  numbers2 reduceRight (_-_);System.out.println("""res11: Int = """ + $show(res$11));$skip(45); 
+  
+  val fullNumbers = (numbers :: numbers2);System.out.println("""fullNumbers  : List[Any] = """ + $show(fullNumbers ));$skip(40); val res$12 = 
+
+	(numbers :: numbers2 reverse) reverse;System.out.println("""res12: List[Any] = """ + $show(res$12))}
 
 }

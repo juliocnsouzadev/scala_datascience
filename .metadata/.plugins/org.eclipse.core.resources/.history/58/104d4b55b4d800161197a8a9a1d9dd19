@@ -1,8 +1,0 @@
-package week5
-
-object ListMethods {
-
-  val names = List("Julio","Rafael","Wellington","Carlos","Marcelo")
-  
-  val numbers = List(12,-10,1,9,8,5,0,-7,87,-99)
-}

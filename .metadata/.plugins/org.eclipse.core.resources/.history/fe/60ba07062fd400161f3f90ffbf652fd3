@@ -1,8 +1,0 @@
-package week4.lists
-
-object Testing {
-  val fruit = List("oranges", "apples", "melons") //> fruit  : List[String] = List(oranges, apples, melons)
-  val f = "apples" :: ("oranges" :: ("melons" ::(Nil)))
-                                                  //> f  : List[String] = List(apples, oranges, melons)
-  fruit.foreach { f => System.out.print(f) }
-}

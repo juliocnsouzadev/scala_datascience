@@ -58,4 +58,13 @@ object Testing {
     squareList(numbers)                           //> res5: List[Int] = List(0, 9, 121, 16, 9, 1, 1, 4)
     
     squareListMap(numbers)                        //> res6: List[Int] = List(0, 9, 121, 16, 9, 1, 1, 4)
+    
+    
+   numbers reduceLeft (_ + _)                     //> res7: Int = 13
+   
+   numbers reduceLeft (_ * _)                     //> res8: Int = 0
+   
+   val n2 = numbers sorted                        //> n2  : List[Int] = List(-3, -2, -1, 0, 1, 3, 4, 11)
+   val z = 1 :: n2                                //> z  : List[Int] = List(1, -3, -2, -1, 0, 1, 3, 4, 11)
+   
 }

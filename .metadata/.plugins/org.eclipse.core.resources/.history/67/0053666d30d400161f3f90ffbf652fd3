@@ -1,5 +1,0 @@
-package week4.lists
-
-object A {
-  println("Welcome to the Scala worksheet")
-}

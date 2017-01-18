@@ -1,5 +1,0 @@
-package week4.lists
-
-object Testing {
-  val fruit = List("oranges", "apples", "melons") //> fruit  : List[String] = List(oranges, apples, melons)
-}

@@ -54,5 +54,14 @@ object Testing {;import org.scalaide.worksheet.runtime.library.WorksheetSupport.
     
     squareList(numbers);System.out.println("""res5: List[Int] = """ + $show(res$5));$skip(32); val res$6 = 
     
-    squareListMap(numbers);System.out.println("""res6: List[Int] = """ + $show(res$6))}
+    squareListMap(numbers);System.out.println("""res6: List[Int] = """ + $show(res$6));$skip(40); val res$7 = 
+    
+    
+   numbers reduceLeft (_ + _);System.out.println("""res7: Int = """ + $show(res$7));$skip(34); val res$8 = 
+   
+   numbers reduceLeft (_ * _);System.out.println("""res8: Int = """ + $show(res$8));$skip(31); 
+   
+   val n2 = numbers sorted;System.out.println("""n2  : List[Int] = """ + $show(n2 ));$skip(19); 
+   val z = 1 :: n2;System.out.println("""z  : List[Int] = """ + $show(z ))}
+   
 }
