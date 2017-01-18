@@ -48,34 +48,19 @@ object Notes {
 
   pairs.unzip                                     //> res14: (scala.collection.immutable.Vector[Int], scala.collection.immutable.V
                                                   //| ector[Char]) = (Vector(11, 10, 9, 8, 7),Vector(J, u, l, i, o))
-
-  allNumbers sum                                  //> res15: Int = 66
-
-  allNumbers product                              //> res16: Int = 0
-
-  allNumbers max                                  //> res17: Int = 11
-
-  allNumbers min                                  //> res18: Int = 0
-
-  allNumbers filter (n => n % 2 == 0) sum         //> res19: Int = 30
-
-  allNumbers filter (n => n % 2 != 0) sum         //> res20: Int = 36
-
-  def isPrime(n: Int): Boolean =
-    (2 until n) forall  (n % _ != 0)              //> isPrime: (n: Int)Boolean
-
-  //CONBINATORIAL SEARCH AND FOR-EXPRESSIONS
-
-  val n = 7                                       //> n  : Int = 7
-  (1 until n) flatMap (i =>
-    (1 until i) map (j => (i, j))) filter(pair => isPrime(pair._1 + pair._2))
-                                                  //> res21: scala.collection.immutable.IndexedSeq[(Int, Int)] = Vector((2,1), (3
-                                                  //| ,2), (4,1), (4,3), (5,2), (6,1), (6,5))
-                                                  
- def scalarProduct(xs: List[Double], ys: List[Double]):Double =
-  (for ((x,y) <- xs zip ys ) yield x * y).sum     //> scalarProduct: (xs: List[Double], ys: List[Double])Double
   
-  scalarProduct(List(10,20), List(5,15))          //> res22: Double = 350.0
- 
-                                                   
+  allNumbers sum                                  //> res15: Int = 66
+  
+  allNumbers product                              //> res16: Int = 0
+  
+  allNumbers max                                  //> res17: Int = 11
+  
+  allNumbers min                                  //> res18: Int = 0
+  
+  allNumbers filter (n => n % 2 == 0) sum         //> res19: Int = 30
+  
+  allNumbers filter (n => n % 2 != 0) sum         //> res20: Int = 36
+  
+  def isPrime (n: Int): Boolean =
+   ( 1 to n by 1) forall (x => x % n == 0)        //> isPrime: (n: Int)Boolean
 }

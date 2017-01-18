@@ -75,7 +75,7 @@ object Notes {
  def scalarProduct(xs: List[Double], ys: List[Double]):Double =
   (for ((x,y) <- xs zip ys ) yield x * y).sum     //> scalarProduct: (xs: List[Double], ys: List[Double])Double
   
-  scalarProduct(List(10,20), List(5,15))          //> res22: Double = 350.0
+  scalarProduct(10, 20)
  
                                                    
 }
