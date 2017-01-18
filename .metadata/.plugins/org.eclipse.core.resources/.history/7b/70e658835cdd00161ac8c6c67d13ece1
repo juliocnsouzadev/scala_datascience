@@ -1,0 +1,28 @@
+package week6
+
+object Notes {
+  val numbers = Vector(12, -10, 1, 9, 8, 5, 0, -7, 87, -99)
+                                                  //> numbers  : scala.collection.immutable.Vector[Int] = Vector(12, -10, 1, 9, 8, 
+                                                  //| 5, 0, -7, 87, -99)
+
+  numbers filter (n => n > 0)                     //> res0: scala.collection.immutable.Vector[Int] = Vector(12, 1, 9, 8, 5, 87)
+  numbers filterNot (n => n > 0)                  //> res1: scala.collection.immutable.Vector[Int] = Vector(-10, 0, -7, -99)
+  numbers partition (n => n > 0)                  //> res2: (scala.collection.immutable.Vector[Int], scala.collection.immutable.Ve
+                                                  //| ctor[Int]) = (Vector(12, 1, 9, 8, 5, 87),Vector(-10, 0, -7, -99))
+  numbers takeWhile (n => n > 0)                  //> res3: scala.collection.immutable.Vector[Int] = Vector(12)
+  numbers dropWhile (n => n > 0)                  //> res4: scala.collection.immutable.Vector[Int] = Vector(-10, 1, 9, 8, 5, 0, -7
+                                                  //| , 87, -99)
+  numbers span (n => n > 0)                       //> res5: (scala.collection.immutable.Vector[Int], scala.collection.immutable.Ve
+                                                  //| ctor[Int]) = (Vector(12),Vector(-10, 1, 9, 8, 5, 0, -7, 87, -99))
+
+  val names = Vector("Julio", "Rafael", "Wellington", "Carlos", "Marcelo")
+                                                  //> names  : scala.collection.immutable.Vector[String] = Vector(Julio, Rafael, W
+                                                  //| ellington, Carlos, Marcelo)
+  
+  names contains "Julio"                          //> res6: Boolean = true
+  
+  names sorted                                    //> res7: scala.collection.immutable.Vector[String] = Vector(Carlos, Julio, Marc
+                                                  //| elo, Rafael, Wellington)
+                                                  
+                                                  names sorted Ordering.String
+}
