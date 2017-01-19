@@ -1,0 +1,24 @@
+package week6
+
+//there can't be two queens int the same row, column or diagonal
+object nqueens {
+  //produces a set of solutions
+  def queensPossiblePositions(numberOfRows: Int): Set[List[Int]] = {
+    
+    def placeQueens(numberOfQueens: Int): Set[List[Int]] = {
+      val empty = Set(List())
+      if (numberOfQueens == 0) empty
+      else
+        for {
+          queens <- placeQueens(numberOfQueens - 1)
+          column <- 0 until numberOfRows //tests all columns
+          if isSafe(column, queens) //filter
+        } yield column :: queens
+      
+      placeQueens(numberOfQueens)
+    }
+  }
+  
+  def isSafe(columns: Int, queens: List[Int]): Boolean =
+
+}
