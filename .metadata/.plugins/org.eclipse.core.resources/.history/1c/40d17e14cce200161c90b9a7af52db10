@@ -1,0 +1,8 @@
+package week6
+
+import scala.io.Source
+
+
+object mnemonics {
+  val in = Source.fromURL("jttp://lamp.epfl.ch/files/content/sites/lamp/files/teaching/progrfun/linuxwords")
+}

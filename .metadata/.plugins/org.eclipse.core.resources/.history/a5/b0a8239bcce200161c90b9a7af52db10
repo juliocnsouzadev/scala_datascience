@@ -1,0 +1,27 @@
+package week6
+
+import scala.io.Source
+
+
+object mnemonics {
+  val in = Source.fromURL("http://lamp.epfl.ch/files/content/sites/lamp/files/teaching/progrfun/linuxwords.txt")
+                                                  //> java.io.FileNotFoundException: http://lamp.epfl.ch/files/content/sites/lamp/
+                                                  //| files/teaching/progrfun/linuxwords
+                                                  //| 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown S
+                                                  //| ource)
+                                                  //| 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown So
+                                                  //| urce)
+                                                  //| 	at java.net.URL.openStream(Unknown Source)
+                                                  //| 	at scala.io.Source$.fromURL(Source.scala:141)
+                                                  //| 	at scala.io.Source$.fromURL(Source.scala:131)
+                                                  //| 	at week6.mnemonics$$anonfun$main$1.apply$mcV$sp(week6.mnemonics.scala:7)
+                                                  //| 
+                                                  //| 	at org.scalaide.worksheet.runtime.library.WorksheetSupport$$anonfun$$exe
+                                                  //| cute$1.apply$mcV$sp(WorksheetSupport.scala:76)
+                                                  //| 	at org.scalaide.worksheet.runtime.library.WorksheetSupport$.redirected(W
+                                                  //| orksheetSupport.scala:65)
+                                                  //| 	at org.scalaide.worksheet.runtime.library.WorksheetSupport$.$execute(Wor
+                                                  //| ksheetSupport.scala:75)
+                                                  //| 	at week6.mnemonics$.main(week6.mnemonics.scala:6)
+                                                  //| 	at week6.mnemonics.main(week6.mnemonics.scala)
+}
