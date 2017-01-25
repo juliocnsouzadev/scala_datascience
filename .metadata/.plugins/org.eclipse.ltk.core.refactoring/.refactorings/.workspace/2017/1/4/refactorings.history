@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;progfun1-forcomp&apos; to &apos;fpps-week06-assign01&apos;&#x0D;&#x0A;- Original element: &apos;progfun1-forcomp&apos;&#x0D;&#x0A;- Renamed element: &apos;progfun1-forcomp&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;progfun1-forcomp&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=progfun1-forcomp" name="fpps-week06-assign01" references="true" stamp="1485331584074" version="1.0"/>
+</session>
