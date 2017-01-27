@@ -2,10 +2,10 @@
 <launchConfiguration type="scala.application">
 <listAttribute key="StepOutExcludePkgsOrClasses"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/SparkWithScala/src/br/com/juliocnsouza/spark/scala/RatingsCounter.scala"/>
+<listEntry value="/SparkWithScala"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
-<listEntry value="1"/>
+<listEntry value="4"/>
 </listAttribute>
 <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="br.com.juliocnsouza.spark.scala.RatingsCounter"/>

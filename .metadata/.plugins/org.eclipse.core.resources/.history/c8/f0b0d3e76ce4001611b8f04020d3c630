@@ -1,0 +1,85 @@
+package br.com.juliocnsouza.spark.scala.spark_basics
+
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.log4j._
+import org.apache.spark.rdd.RDD
+
+/** Compute the average number of friends by age in a social network. */
+object FriendsByAge {
+
+  /** A function that splits a line of input into (age, numFriends) tuples. */
+  def parseLineByAge(line: String) = {
+    // Split by commas
+    val fields = line.split(",")
+    // Extract the age and numFriends fields
+    val age = fields(2).toString
+    val numFriends = fields(3).toInt
+    // Create a tuple that is our result.
+    (age, numFriends)
+  }
+
+  def parseLineByName(line: String) = {
+    val fields = line.split(",")
+    val name = fields(1).toString
+    val numFriends = fields(3).toInt
+    (name, numFriends)
+  }
+
+  def parseLineByNameFirstLetter(line: String) = {
+    val fields = line.split(",")
+    val firstLetter = fields(1).toString.charAt(0).toString
+    val numFriends = fields(3).toInt
+    (firstLetter, numFriends)
+  }
+
+  def build(title: String, lines: RDD[String], rddMapFunc: String => (String, Int), opMapFunc: (Int, Int) => Int) = {
+
+    val rdd = lines map rddMapFunc
+
+    val totals = rdd.mapValues(x => (x, 1)).reduceByKey((x, y) => (x._1 + y._1, x._2 + y._2))
+
+    val operation = totals.mapValues(x => opMapFunc(x._1, x._2))
+
+    val results = operation.collect
+    
+    show(title, results)
+
+  }
+
+  def show(title:String , results: Array[(String, Int)]) = {
+    println("\n" + title)
+    results.sorted.foreach(println)
+  }
+
+  /** Our main function where the action happens */
+  def main(args: Array[String]) {
+    // Set the log level to only print errors
+    Logger.getLogger("org").setLevel(Level.ERROR)
+
+    // Create a SparkContext using every core of the local machine
+    val sc = new SparkContext("local[*]", "FriendsByAge")
+
+    // Load each line of the source data into an RDD
+    val lines = sc.textFile("../fakefriends.csv")
+
+    def avg(x:Int, y:Int) =  x / y
+    
+    def sum(x:Int, y:Int) =  x + y
+    
+    build("Averages By Age", lines, parseLineByAge, avg)
+
+    build("Averages By Name", lines, parseLineByName, avg)
+
+    build("Averages By First Letter", lines, parseLineByNameFirstLetter, avg)
+    
+    build("Sum By Age", lines, parseLineByAge, sum)
+
+    build("Sum By Name", lines, parseLineByName, sum)
+
+    build("Sum By First Letter", lines, parseLineByNameFirstLetter, sum)
+
+  }
+
+}
+  
