@@ -1,0 +1,34 @@
+package br.com.juliocnsouza.spark.scala.spark_basics
+
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.log4j._
+import scala.math.min
+import scala.math.max
+
+object CustomerPurchases {
+
+  def parseLine(line: String) = {
+    val fields = line.split(",")
+    val orderID = fields(0).toString
+    val customerID = fields(1).toString
+    val total = fields(2).toFloat
+    (orderID, customerID, total)
+  }
+
+  def main(args: Array[String]) {
+
+    // Set the log level to only print errors
+    Logger.getLogger("org").setLevel(Level.ERROR)
+
+    // Create a SparkContext using every core of the local machine
+    val sc = new SparkContext("local[*]", "MinTemperatures")
+
+    // Read each line of input data
+    val lines = sc.textFile("../customer-orders.csv")
+    
+    val x = lines map parseLine map ((o,c,t)=> (c, t))
+
+  }
+
+}

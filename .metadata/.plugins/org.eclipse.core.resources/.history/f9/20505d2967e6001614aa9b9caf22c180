@@ -1,0 +1,10 @@
+package br.com.juliocnsouza.spark.scala.spark_basics
+
+object CustomerPurchases {
+  
+  def main(args: Array[String]) {
+    
+    
+  }
+  
+}
