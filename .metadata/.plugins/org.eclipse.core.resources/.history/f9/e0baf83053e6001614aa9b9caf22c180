@@ -1,0 +1,45 @@
+package br.com.juliocnsouza.spark.scala.spark_basics
+
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.log4j._
+import scala.math.min
+import scala.math.max
+import java.util.Date
+
+object MorePreciptations {
+
+  def parseLine(line: String) = {
+    val fields = line.split(",")
+    val date = fields(1).toLong
+    val preciptations = fields(3).toFloat
+    (date, preciptations)
+  }
+  
+  def myMax(value1: (Long, Float), value2: (Long, Float)): (Long, Float) = 
+    if (max(value1._2, value2._2) == value1._2) value1
+    else value2
+
+  /** Our main function where the action happens */
+  def main(args: Array[String]) {
+
+    // Set the log level to only print errors
+    Logger.getLogger("org").setLevel(Level.ERROR)
+
+    // Create a SparkContext using every core of the local machine
+    val sc = new SparkContext("local[*]", "MinTemperatures")
+
+    // Read each line of input data
+    val lines = sc.textFile("../1800.csv")
+
+    val results = lines filter (line => line contains ",PRCP,") map (parseLine) reduce(myMax) collect
+
+    for (result <- results.sorted) {
+      val day = new Date(result._1)
+      val precip = result._2
+      println(s"$day : $precip")
+    }
+
+  }
+
+}
