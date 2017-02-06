@@ -1,8 +1,0 @@
-package week6
-
-object maps {
-  val romanNumerals = Map("I" -> 1, "II" -> 2, "III" -> 3 , "IV" -> 4, "V" -> 5)
-  val capitalOfCountry = Map("Brazil" -> "Brasilia", "Switzerland" -> "Bern")
-                                                  
-	capitalOfCountry "Brazil"
-}

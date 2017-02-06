@@ -234,7 +234,6 @@ INDEX VERSION 1.127+C:\Users\julio\Documents\GitHub\scala_datascience\.metadata\
 2738182576.index
 3267612513.index
 2268254109.index
-138428293.index
 2831536327.index
 4226226.index
 1791279221.index
