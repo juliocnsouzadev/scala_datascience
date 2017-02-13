@@ -1,5 +1,0 @@
-package br.com.juliocnsouza.spark.scala.rdd
-
-object rdds {
-  println("Welcome to the Scala worksheet")
-}
