@@ -1,0 +1,5 @@
+package week01.json
+
+class JObj(bindings: Map[String,JSON])  extends JSON {
+  
+}

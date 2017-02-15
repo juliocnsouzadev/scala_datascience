@@ -1,0 +1,5 @@
+package week01.json
+
+class JStr(str: String) extends JSON {
+  
+}

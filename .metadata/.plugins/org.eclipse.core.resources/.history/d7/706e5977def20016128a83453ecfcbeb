@@ -1,0 +1,11 @@
+package week01.json
+
+abstract class JSON {
+  
+  override def toString():String = {
+    this match {
+      case JSeq(elems) => "[" + (elems map mkString ", ") + "]"
+    }
+  }
+  
+}

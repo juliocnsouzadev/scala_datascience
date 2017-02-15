@@ -1,0 +1,11 @@
+package week01.json
+
+object JsonTests {
+
+	val data = JObj(
+		Map(
+			"firstName" -> JStr("Julio)
+		)
+	)
+
+}

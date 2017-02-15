@@ -1,0 +1,37 @@
+package week01.json
+
+object JsonTests {
+
+	val data = JObj(
+		Map(
+			"firstName" -> JStr("Julio"),
+			"lastName" -> JStr("Souza"),
+			"address" -> JObj(
+				Map(
+					"streetAddress" -> JStr("21 2nd Street"),
+					"state" -> JStr("NY"),
+					"postalCode" -> JNum(10021)
+				)
+			),
+			"phoneNumbers" -> JSeq(
+				List(
+					JObj(
+						Map(
+							"type" -> JStr("home"),
+							"number" -> JStr("212 55 1234")
+						)
+					),
+					JObj(
+						Map(
+							"type" -> JStr("mobile"),
+							"number" -> JStr("555 55 1234")
+						)
+					)
+				)
+			)
+		)
+	)
+	
+	println(data)
+
+}

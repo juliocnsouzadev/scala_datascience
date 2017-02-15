@@ -1,0 +1,64 @@
+package week01.json
+
+object JsonTests {
+
+	val data = JObj(
+		Map(
+			"firstName" -> JStr("Julio"),
+			"lastName" -> JStr("Souza"),
+			"address" -> JObj(
+				Map(
+					"streetAddress" -> JStr("21 2nd Street"),
+					"state" -> JStr("NY"),
+					"postalCode" -> JNum(10021)
+				)
+			),
+			"phoneNumbers" -> JSeq(
+				List(
+					JObj(
+						Map(
+							"type" -> JStr("home"),
+							"number" -> JStr("212 55 1234")
+						)
+					),
+					JObj(
+						Map(
+							"type" -> JStr("mobile"),
+							"number" -> JStr("555 55 1234")
+						)
+					)
+				)
+			)
+		)
+	)                                         //> data  : week01.json.JObj = {"firstName": "Julio", "lastName": "Souza", "addr
+                                                  //| ess": {"streetAddress": "21 2nd Street", "state": "NY", "postalCode": 10021.
+                                                  //| 0}, "phoneNumbers": [{"type": "home", "number": "212 55 1234"}, {"type": "mo
+                                                  //| bile", "number": "555 55 1234"}]}
+	
+	
+	
+	println(data.toString)                    //> {"firstName": "Julio", "lastName": "Souza", "address": {"streetAddress": "21
+                                                  //|  2nd Street", "state": "NY", "postalCode": 10021.0}, "phoneNumbers": [{"type
+                                                  //| ": "home", "number": "212 55 1234"}, {"type": "mobile", "number": "555 55 12
+                                                  //| 34"}]}
+
+	val f: String => String ={case "ping" => "pong"}
+                                                  //> f  : String => String = <function1>
+	f("ping")                                 //> res0: String = pong
+	//f("other")                              //> scala.MatchError: other (of class java.lang.String)
+                                                  //| 	at week01.json.JsonTests$$anonfun$main$1$$anonfun$1.apply(week01.json.Js
+                                                  //| onTests.scala:39)
+                                                  //| 	at week01.json.JsonTests$$anonfun$main$1$$anonfun$1.apply(week01.json.Js
+                                                  //| onTests.scala:39)
+                                                  //| 	at week01.json.JsonTests$$anonfun$main$1.apply$mcV$sp(week01.json.JsonTe
+                                                  //| sts.scala:41)
+                                                  //| 	at org.scalaide.worksheet.runtime.library.WorksheetSupport$$anonfun$$exe
+                                                  //| cute$1.apply$mcV$sp(WorksheetSupport.scala:76)
+                                                  //| 	at org.scalaide.worksheet.runtime.library.WorksheetSupport$.redirected(W
+                                                  //| orksheetSupport.scala:65)
+                                                  //| 	at org.scalaide.worksheet.runtime.library.WorksheetSupport$.$execute(Wor
+                                                  //| ksheetSupport.scala:75)
+                                                  //| 	at week01.json.JsonTests$.main(week01.json.JsonTests.scala:3)
+                                                  //| 	at week01.json.JsonTests.main(week01.json.JsonTests.scala)
+
+}
