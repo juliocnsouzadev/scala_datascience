@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item value="C:\Apps\Spark\jars" key="org.eclipse.jdt.ui.lastextjar"/>
-	<item value="C:\Users\julio\Documents\GitHub\scala_datascience\spark-with-scala\SparkWithScala" key="org.eclipse.jdt.ui.last.external.project"/>
+	<item value="C:\Users\julio\Documents\GitHub\scala_datascience\functional_program_design_in_scala" key="org.eclipse.jdt.ui.last.external.project"/>
 	<section name="RefactoringWizard.preview">
 		<item value="600" key="width"/>
 		<item value="400" key="height"/>

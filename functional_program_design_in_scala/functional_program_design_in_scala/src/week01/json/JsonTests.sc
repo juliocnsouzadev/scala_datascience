@@ -51,5 +51,6 @@ object JsonTests {
                                                   //> f2  : PartialFunction[String,String] = <function1>
 	f2.isDefinedAt("ping")                    //> res1: Boolean = true
 	f2.isDefinedAt("other")                   //> res2: Boolean = false
+	
 
 }

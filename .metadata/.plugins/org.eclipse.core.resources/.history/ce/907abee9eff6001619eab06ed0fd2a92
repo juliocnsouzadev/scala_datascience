@@ -1,0 +1,49 @@
+package week01.json
+
+object QueriesInFor {
+
+	case class Baby(name: String, parents: List[String])
+	
+	val babies = List(
+		Baby(
+			name = "Julia",
+			parents = List("Julio", "Marilia")
+		),
+		Baby(
+			name = "Rafaela",
+			parents = List("Ademilson", "Flavia")
+		),
+		Baby(
+			name = "Sofia",
+			parents = List("Jose", "Maria")
+		),
+		Baby(
+			name = "Ester",
+			parents = List("Carlos", "Joana")
+		),
+		Baby(
+			name = "Joao",
+			parents = List("Carlos", "Joana")
+		),
+		Baby(
+			name = "Solange",
+			parents = List("Gilberto", "Maria")
+		)
+	)                                         //> babies  : List[week01.json.QueriesInFor.Baby] = List(Baby(Julia,List(Julio, 
+                                                  //| Marilia)), Baby(Rafaela,List(Ademilson, Flavia)), Baby(Sofia,List(Jose, Mari
+                                                  //| a)), Baby(Ester,List(Carlos, Joana)), Baby(Joao,List(Carlos, Joana)), Baby(S
+                                                  //| olange,List(Gilberto, Maria)))
+
+	for (b <- babies; p <- b.parents if p startsWith "J") yield b.name
+                                                  //> res0: List[String] = List(Julia, Sofia, Ester, Joao)
+                                                  
+	for {
+			b1 <- babies
+			b2 <- babies
+			if b1.name < b2.name
+			p1 <- b1.parents
+			p2 <- b2.parents
+			if p1 == p2
+		} yield p1                        //> res1: List[String] = List(Maria, Carlos, Joana)
+	
+}

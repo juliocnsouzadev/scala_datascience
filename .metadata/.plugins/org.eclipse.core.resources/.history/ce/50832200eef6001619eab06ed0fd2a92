@@ -1,0 +1,19 @@
+package week01.json
+
+object QueriesInFor {
+
+	case class Baby(name: String, parents: List[String])
+	
+	val babies = List(
+		Baby(
+			name = "Julia",
+			parents = List("Julio", "Marilia")
+		),
+		Baby(
+			name = "Rafaela",
+			parents = List("Ademilson", "Flavia")
+		)
+	)                                         //> babies  : List[week01.json.QueriesInFor.Baby] = List(Baby(Julia,List(Julio, 
+                                                  //| Marilia)))
+
+}

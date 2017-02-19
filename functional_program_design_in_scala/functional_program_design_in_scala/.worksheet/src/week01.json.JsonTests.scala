@@ -43,5 +43,6 @@ object JsonTests {;import org.scalaide.worksheet.runtime.library.WorksheetSuppor
 	val f2: PartialFunction[String, String] = {case "ping" => "pong"};System.out.println("""f2  : PartialFunction[String,String] = """ + $show(f2 ));$skip(24); val res$1 = 
 	f2.isDefinedAt("ping");System.out.println("""res1: Boolean = """ + $show(res$1));$skip(25); val res$2 = 
 	f2.isDefinedAt("other");System.out.println("""res2: Boolean = """ + $show(res$2))}
+	
 
 }
