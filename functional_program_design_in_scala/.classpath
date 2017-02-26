@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry kind="src" path="fpds_assing_w01_01/project"/>
-	<classpathentry kind="src" path="fpds_assing_w01_01/src/main/scala"/>
-	<classpathentry kind="src" path="fpds_assing_w01_01/src/test/scala"/>
-	<classpathentry kind="lib" path="fpds_assing_w01_01/target/scala-2.11/progfun2-example_2.11-0.1-SNAPSHOT.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="output" path="fpds_assing_w01_01/target/scala-2.11/test-classes"/>
-</classpath>

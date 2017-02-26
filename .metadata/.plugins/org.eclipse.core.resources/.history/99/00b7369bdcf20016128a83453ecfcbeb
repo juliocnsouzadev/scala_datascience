@@ -1,5 +1,0 @@
-package week01.json
-
-class JSeq(elems: List[JSON]) extends JSON {
-  
-}
