@@ -48,38 +48,53 @@ class Arry[T] {
 ```
 
 Generally an indexed assignment like:
+
 ```
 f(E1,...,Ea) = E
 ```
+
 is translated to:
+
 ```
 f.update(E1...Ea,E)
 ```
+
 This works also if n=0:
-``
+
+```
 f() = E //is shorthand for...
 f.update(E)
 ```
+
 Hence:
+
 ```
 sig.update(5)
 ```
+
 can be abbreviated to 
+
 ```
 sig() = 5
 ```
 
 ##Signals and Variables
 Signals of type Var look a bit like mutable vairables where
+
 ```
 sig()
 ```
+
 is dereferecenting, and
+
 ```
+
 sig() = newValue
+
 ```
 is update
 ```
+
 But there is a crucial difference:
 We can map over signals, which gives us a relacion between tow signals that is mantained automactically, at all future points in time.
 No such mechnism existis for mutable variables; we have to porpagate all updates manually.
